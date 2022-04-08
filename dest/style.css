@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.canvas {
+  background-color: lightgrey;
+  margin-top: 30px;
+}
+
+.buttons-list {
+  list-style: none;
+  margin: 20px 0 0 0;
+  padding: 0;
+  display: flex;
+}
+.buttons-item {
+  margin-right: 20px;
+}
+.buttons-item:last-child {
+  margin-right: 0;
+}
+
+.modal {
+  font-family: "Press Start 2P", "Arial", cursive;
+  font-size: 50px;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(51, 48, 48, 0.8);
+  justify-content: center;
+  align-items: center;
+  display: none;
+  cursor: pointer;
+}
+.modal-error {
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  top: 100px;
+  right: 250px;
+  cursor: pointer;
+}
+.modal-close::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 100%;
+  background-color: white;
+  top: 0;
+  left: 15px;
+  transform: rotate(45deg);
+}
+.modal-close::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 100%;
+  background-color: white;
+  top: 0;
+  left: 15px;
+  transform: rotate(-45deg);
+}
+.modal-close:hover {
+  width: 50px;
+  height: 50px;
+  top: 95px;
+  right: 240px;
+}
+.modal.show {
+  display: flex;
+}
